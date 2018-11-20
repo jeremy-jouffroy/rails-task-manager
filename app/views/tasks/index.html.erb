@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12-xs">
+      <h1>Index des taches</h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12-xs">
+      <ul class="list-group" style="list-style-type: none;">
+      <% @tasks.each do |task| %>
+        <li>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="<%= task.completed %>" id="<%= task.id %>"
+            <%= task.completed ? "checked" : "" %>
+            >
+
+            <label class="form-check-label" for="<%= task.id %>">  <%= link_to "#{task.title}", task_path(task) %>
+            </label>
+          </div>
+        </li>
+      <% end %>
+      </ul>
+    </div>
+  </div>
+</div>
