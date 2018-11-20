@@ -16,10 +16,20 @@
 
             <label class="form-check-label" for="<%= task.id %>">  <%= link_to "#{task.title}", task_path(task) %>
             </label>
+            <%= link_to task_path(task),
+                  method: :delete,
+                  data: { confirm: "Are you sure?" } do %>
+                  <i class='far fa-trash-alt'></i>
+            <% end %>
           </div>
         </li>
       <% end %>
       </ul>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12-xs">
+     <%= link_to "ajouter une tache", new_task_path, class: 'btn btn-primary'%>
     </div>
   </div>
 </div>

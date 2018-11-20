@@ -25,7 +25,12 @@
   <hr>
    <div class="row">
     <div class="col-12-xs">
-      <p><%= link_to "see all task", tasks_path  %></p>
+      <p><%= link_to "edit task", edit_task_path, class: 'btn btn-primary' %></p>
     </div>
+  </div>
+  <div class="row">
+    <div class="col-12-xs">
+      <p><%= link_to "see all task", tasks_path, class: 'btn btn-secondary'%></p>
     </div>
+  </div>
 </div>
